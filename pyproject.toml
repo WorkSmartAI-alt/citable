@@ -3,8 +3,8 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "citable"
-version = "0.2.2"
+name = "citable-cli"
+version = "0.2.3"
 description = "AI search visibility audit for ChatGPT, Claude, Perplexity, Google AI"
 readme = "README.md"
 license = { text = "MIT" }

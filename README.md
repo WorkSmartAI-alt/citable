@@ -2,7 +2,7 @@
 
 > Score your website for AI search visibility in 60 seconds. Free. Open source. No signup.
 
-[![PyPI version](https://img.shields.io/pypi/v/citable.svg)](https://pypi.org/project/citable/)
+[![PyPI version](https://img.shields.io/pypi/v/citable-cli.svg)](https://pypi.org/project/citable-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://github.com/WorkSmartAI-alt/citable/workflows/ci/badge.svg)](https://github.com/WorkSmartAI-alt/citable/actions)
@@ -12,7 +12,7 @@ Most websites are invisible to ChatGPT, Claude, and Perplexity. Most teams do no
 `citable` is a command-line tool that audits your site for AI search visibility and traditional SEO foundations, then writes a multi-sheet xlsx with the exact fixes ranked by impact, owner, and effort.
 
 ```bash
-pipx install citable
+pipx install citable-cli
 citable audit example.com
 ```
 
@@ -89,8 +89,10 @@ The clean way: [pipx](https://pipx.pypa.io) installs each Python CLI into its ow
 ```bash
 brew install pipx              # macOS, one-time
 pipx ensurepath                # adds pipx CLIs to your PATH
-pipx install citable
+pipx install citable-cli
 ```
+
+The package is published on PyPI as `citable-cli` (the `citable` name on PyPI belongs to an unrelated 2021 Zenodo loader). The CLI binary is still `citable`. To import in Python: `import citable`.
 
 For development or hacking on the code:
 
@@ -172,7 +174,7 @@ citable refuses to do this. When evidence is mixed, it marks the check `unverifi
 
 Honesty is the moat. Here is what citable does NOT do in v0.2.x:
 
-1. **No JavaScript rendering.** SPA sites without server-side rendering will look empty. Adding Playwright is a v0.3.0 candidate — it adds 5-10x latency and a Chromium dependency.
+1. **No JavaScript rendering.** SPA sites without server-side rendering will look empty. Adding Playwright is a v0.3.0 candidate. It adds 5-10x latency and a Chromium dependency.
 2. **Read-only.** citable audits. It does not write to your site. Fixing the findings is on you (or your agency).
 3. **No login required, so no authenticated pages.** Pages behind a login are not crawled.
 4. **Single host.** Audits one site per run. No multi-site batch yet.
@@ -205,7 +207,7 @@ For anything beyond a typo fix, open an issue first so we can align on scope.
 ## FAQ
 
 **Does citable send data to a server?**
-No. Everything runs on your machine. Read [src/citable/crawler.py](src/citable/crawler.py) — the only outbound traffic is to the site you're auditing.
+No. Everything runs on your machine. Read [src/citable/crawler.py](src/citable/crawler.py): the only outbound traffic is to the site you're auditing.
 
 **Does it need an API key?**
 No.
