@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Audit outputs
+citable-reports/
+*.xlsx
+!examples/*.xlsx
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Internal strategy + pre-launch drafts (not public)
+LAUNCH-PLAN.md
+launch/
+FEEDBACK.md
+ROSEMARY-DRAFT-EMAIL.md
