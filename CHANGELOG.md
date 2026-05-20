@@ -1,5 +1,40 @@
 # Changelog
 
+## v0.2.3 (2026-05-20)
+
+Pre-PyPI-publish prep.
+
+### Changed
+
+- **PyPI package name renamed from `citable` to `citable-cli`.** The `citable` name on PyPI belongs to an unrelated, abandoned (Feb 2021) Zenodo dataset loader. The CLI binary stays `citable`, the Python module stays `citable`, and the GitHub repo / brand stays `citable`. Only the PyPI distribution name changes. Install becomes `pipx install citable-cli`.
+
+### Fixed
+
+- Two em-dashes in README that slipped through the voice scan (lines 175 and 208). Replaced with a period and a colon respectively.
+
+---
+
+## v0.2.2 (2026-05-20)
+
+Driven by a real question about scoring fairness: a 1-page H1 issue was dragging the entire Content Structure category to F. Audited the scoring math openly.
+
+### Fixed
+
+- **C-11 H1 check thresholds.** Was failing on ANY missing H1 (even 1 page out of 50 = 2% issue rate), while sibling checks C-09 and C-10 required >20-30% issue rate to fail. Made all three consistent: >10% to fail, 0-10% to warn, 0 to pass. Restored fairness to the Content Structure category score.
+
+### Added
+
+- **Score Breakdown sheet (Sheet 5)** showing the math behind every number: per-category weights, check counts, verdict tallies, score per category, contribution to overall. Auditable transparency.
+- Pointer in the Action Plan sheet directing readers to Sheet 5 if they want to challenge the math.
+
+### Calibration after fixes
+
+- work-smart.ai: 100/A (unchanged, no Content Structure issues)
+- WE Family /resources/: 58/C → 61/C (Content Structure moved F to D, more honest)
+- example.com: 18/F (unchanged)
+
+---
+
 ## v0.2.1 (2026-05-20)
 
 Driven by a real "send this to the marketing agency" stress test. The technical sheets were unreadable for a non-developer. This release adds a first sheet designed for the agency audience and fixes a schema display bug.
