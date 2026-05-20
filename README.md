@@ -1,15 +1,15 @@
 # citable
 
-> Score your website for AI search visibility in 60 seconds. Free. Open source. No signup.
+> Open-source CLI that scores your site for AI search (ChatGPT, Claude, Perplexity) and SEO foundations. 15 checks across crawlability, schema, internal links, content. Free.
 
 [![PyPI version](https://img.shields.io/pypi/v/citable-cli.svg)](https://pypi.org/project/citable-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://github.com/WorkSmartAI-alt/citable/workflows/ci/badge.svg)](https://github.com/WorkSmartAI-alt/citable/actions)
 
-Most websites are invisible to ChatGPT, Claude, and Perplexity. Most teams do not know why.
+Most websites are invisible to ChatGPT, Claude, and Perplexity. Most teams do not know why. Their classic SEO is usually solid; their AI search signals are not.
 
-`citable` is a command-line tool that audits your site for AI search visibility and traditional SEO foundations, then writes a multi-sheet xlsx with the exact fixes ranked by impact, owner, and effort.
+`citable` is a command-line tool that audits both. 15 checks across 6 categories cover the AI search basics (AI bot allowlist, FAQPage schema, Organization schema for entity recognition, render time for crawlers) AND the SEO foundations that overlap (robots.txt, sitemap.xml, canonical URLs, meta descriptions, titles, H1 hygiene, OG tags, HSTS, internal link audit, anchor text quality, orphan pages). Output is a multi-sheet xlsx with the exact fixes ranked by impact, owner, and effort.
 
 ```bash
 pipx install citable-cli
