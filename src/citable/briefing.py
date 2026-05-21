@@ -1,12 +1,13 @@
-"""Marketing-agency briefing translation layer.
+"""Non-technical translation layer for the Action Plan xlsx sheet.
 
-The xlsx Marketing Brief sheet needs three things per check that the technical
-sheets do not have:
+The Action Plan needs three things per check that the technical sheets do not:
 
-- OWNER: which role on the agency side picks this up (Developer / Designer /
-  Copywriter / DevOps / Marketer)
-- EFFORT: rough time-box so the agency can sprint-plan
-- WHY: plain-English business reason for why it matters
+- OWNER: which role picks this up (Developer / Designer / Copywriter / DevOps /
+  Marketer). Tells the website owner who to assign the task to, whether the
+  team is in-house or external.
+- EFFORT: rough time-box so the owner or their team can sprint-plan
+- WHY: plain-English business reason tied to outcomes (citations,
+  click-throughs, entity recognition)
 
 These maps are the source of truth. Keep messages free of jargon.
 """

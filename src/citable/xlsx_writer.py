@@ -308,7 +308,9 @@ def write_pages_sheet(ws, report: AuditReport) -> None:
 
 
 def write_action_plan_sheet(ws, report: AuditReport) -> None:
-    """Marketing-agency view. Plain English, owner per task, effort estimate,
+    """Non-technical view designed for the website owner, in-house marketing
+    team, or any external agency receiving the report. Plain English, owner
+    per task (Developer / Designer / Copywriter / DevOps), effort estimate,
     priority bucket (P1 this week, P2 this month, P3 optional). First sheet
     that opens by default."""
     ws.title = "Action Plan"
