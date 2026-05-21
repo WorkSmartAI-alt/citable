@@ -24,7 +24,7 @@ Five-sheet xlsx report:
 
 | Sheet | For | What's in it |
 |---|---|---|
-| **Action Plan** | Your marketing agency | Plain-English tasks bucketed P1 / P2 / P3, with owner (Developer / Designer / Copywriter / DevOps) and effort estimate per task |
+| **Action Plan** | You (the owner), your marketing team, or any non-technical reader | Plain-English tasks bucketed P1 / P2 / P3, with owner (Developer / Designer / Copywriter / DevOps) and effort estimate per task |
 | **Summary** | Executive / audit trail | Overall score, category breakdown, top 5 actions |
 | **Action List** | Your developer | Every check with verdict, severity, and technical fix text |
 | **Per-Page Detail** | Anyone debugging | One row per crawled page: title, render time, OG tags, schemas detected, top issue |
