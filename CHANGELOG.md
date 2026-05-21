@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased (v0.3.0 planning, 2026-05-21)
+
+Three confirmed v0.3.0 scope items, all driven by real-world feedback this week:
+
+- **Issue #1** — Soften C-02 AI bot allowlist severity (r/coolgithubprojects feedback that robots.txt is opt-out, not opt-in)
+- **Issue #2** — Add firewall blocking detection check C-26 (r/coolgithubprojects feedback that Cloudflare/WAF blocks before robots.txt is read)
+- **Issue #3** — Add soft-404 detection check C-25 (Bing Webmaster Tools flagged 18 soft-404s on work-smart.ai that citable 100/A score missed because it only audits sitemap URLs)
+
+No code shipped in v0.3.0 yet. These three issues lock the scope.
+
+---
+
 ## v0.2.3 (2026-05-20)
 
 Pre-PyPI-publish prep.
