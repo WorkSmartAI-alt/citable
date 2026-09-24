@@ -520,7 +520,7 @@ def check_title_length(pages: list[Page], ctx: SiteContext) -> list[CheckResult]
             verdict=Verdict.WARN,
             severity=Severity.P2,
             message=f"{too_short} title(s) under 20 chars, {too_long} over 80 chars, {missing} missing. Out of 30-65 char range hurts how titles render in AI engine snippets and search results.",
-            fix_text="Rewrite affected titles into the 30-65 char range. Lead with the keyword or buyer phrase, then brand. Example: `Wealth Enterprise Governance: Why It Matters | a WordPress test site`. Check each title against the Per-Page Detail sheet for which pages need work.",
+            fix_text="Rewrite affected titles into the 30-65 char range. Lead with the keyword or buyer phrase, then brand. Example: `Enterprise AI Governance: Why It Matters | Example Co`. Check each title against the Per-Page Detail sheet for which pages need work.",
             pages_affected=missing + too_long + too_short,
             total_pages=len(valid),
         )]

@@ -2,7 +2,6 @@
 
 > Open-source CLI that scores your site for AI search (ChatGPT, Claude, Perplexity) and SEO foundations. 15 checks across crawlability, schema, internal links, content. Free.
 
-[![PyPI version](https://img.shields.io/pypi/v/citable-cli.svg)](https://pypi.org/project/citable-cli/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://github.com/WorkSmartAI-alt/citable/workflows/ci/badge.svg)](https://github.com/WorkSmartAI-alt/citable/actions)
@@ -12,7 +11,7 @@ Most websites are invisible to ChatGPT, Claude, and Perplexity. Most teams do no
 `citable` is a command-line tool that audits both. 15 checks across 6 categories cover the AI search basics (AI bot allowlist, FAQPage schema, Organization schema for entity recognition, render time for crawlers) AND the SEO foundations that overlap (robots.txt, sitemap.xml, canonical URLs, meta descriptions, titles, H1 hygiene, OG tags, HSTS, internal link audit, anchor text quality, orphan pages). Output is a multi-sheet xlsx with the exact fixes ranked by impact, owner, and effort.
 
 ```bash
-pipx install citable-cli
+pipx install git+https://github.com/WorkSmartAI-alt/citable.git
 citable audit example.com
 ```
 
@@ -48,6 +47,19 @@ Because the alternative is paying $300/month for a SaaS that hides its math, or 
 | Path-scoped section audits | Yes | No | No | No |
 
 citable will not be the most feature-rich AI visibility tool on the market. The defensible moat is honesty: it shows its math, names its thresholds in the source code, and tells you what it cannot check.
+
+## Use it inside Claude (Cowork and Claude Code)
+
+citable ships as a Claude plugin. Install it and ask in plain language: "audit example.com for AI search" or "why doesn't ChatGPT mention our company". Claude runs the audit, reads the report and walks you through the fixes that matter, in priority order.
+
+In Claude Code:
+
+```
+/plugin marketplace add WorkSmartAI-alt/citable
+/plugin install citable@citable
+```
+
+The plugin runs the same open-source engine as the CLI, on your machine. No API keys, no account, no data sent anywhere except the requests to the site being audited. The first run installs six small Python packages.
 
 ## What citable checks
 
@@ -89,10 +101,10 @@ The clean way: [pipx](https://pipx.pypa.io) installs each Python CLI into its ow
 ```bash
 brew install pipx              # macOS, one-time
 pipx ensurepath                # adds pipx CLIs to your PATH
-pipx install citable-cli
+pipx install git+https://github.com/WorkSmartAI-alt/citable.git
 ```
 
-The package is published on PyPI as `citable-cli` (the `citable` name on PyPI belongs to an unrelated 2021 Zenodo loader). The CLI binary is still `citable`. To import in Python: `import citable`.
+citable is not on PyPI yet, so install it straight from this repository. The CLI binary is `citable`. To import in Python: `import citable`.
 
 For development or hacking on the code:
 

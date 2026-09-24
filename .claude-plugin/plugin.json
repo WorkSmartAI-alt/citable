@@ -1,0 +1,23 @@
+{
+  "name": "citable",
+  "version": "0.1.0",
+  "description": "Audit any website for AI search visibility and see what ChatGPT, Claude, Perplexity and Google AI Overviews crawlers can actually read on it. 15 checks. A fix plan an owner can read, with scoring you can audit. Runs locally. No API keys.",
+  "author": {
+    "name": "Work-Smart.ai",
+    "email": "ignacio@work-smart.ai",
+    "url": "https://work-smart.ai"
+  },
+  "homepage": "https://work-smart.ai/services/ai-visibility",
+  "repository": "https://github.com/WorkSmartAI-alt/citable",
+  "license": "MIT",
+  "keywords": [
+    "ai-visibility",
+    "seo",
+    "geo",
+    "aeo",
+    "audit",
+    "schema",
+    "robots-txt",
+    "llm-search"
+  ]
+}

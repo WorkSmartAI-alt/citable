@@ -582,7 +582,7 @@ async def discover_urls(
                     break
 
     # Scoped audits also follow 1 hop OFF-prefix to capture linked content.
-    # a WordPress test site case: /resources/ hub paginates as /resources/page/2/, /page/3/,
+    # Real-world case: a WordPress /resources/ hub paginates as /resources/page/2/, /page/3/,
     # /page/4/. Each pagination page links to ~9 unique /resource/foo articles.
     # We must harvest links from EVERY in-prefix page, not just the seed.
     # The user's mental model is "audit /resources/ AND what it links to."

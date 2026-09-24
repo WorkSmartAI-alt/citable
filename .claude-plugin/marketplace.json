@@ -1,0 +1,23 @@
+{
+  "name": "citable",
+  "description": "citable, the open-source AI search visibility audit, packaged as a Claude plugin.",
+  "owner": {
+    "name": "Work-Smart.ai",
+    "email": "ignacio@work-smart.ai",
+    "url": "https://work-smart.ai"
+  },
+  "plugins": [
+    {
+      "name": "citable",
+      "source": "./",
+      "description": "Audit any website for AI search visibility and see what ChatGPT, Claude, Perplexity and Google AI Overviews crawlers can actually read on it. 15 checks. A fix plan an owner can read, with scoring you can audit. Runs locally. No API keys.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Work-Smart.ai",
+        "url": "https://work-smart.ai"
+      },
+      "homepage": "https://work-smart.ai/services/ai-visibility",
+      "category": "productivity"
+    }
+  ]
+}

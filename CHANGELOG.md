@@ -42,7 +42,7 @@ Driven by a real question about scoring fairness: a 1-page H1 issue was dragging
 ### Calibration after fixes
 
 - work-smart.ai: 100/A (unchanged, no Content Structure issues)
-- a WordPress test site /resources/: 58/C → 61/C (Content Structure moved F to D, more honest)
+- WordPress test site /resources/: 58/C → 61/C (Content Structure moved F to D, more honest)
 - example.com: 18/F (unchanged)
 
 ---
@@ -58,7 +58,7 @@ Driven by a real "send this to the marketing agency" stress test. The technical 
 
 ### Fixed
 
-- **Per-Page Detail "Schema Types: (none)" bug.** When a page used the WordPress / Yoast JSON-LD pattern (schemas nested in `@graph` arrays), citable was only reading top-level `@type` and missed everything. Now walks `@graph` recursively. a WordPress test site pages now correctly display `Article, BreadcrumbList, Organization, Person, WebPage, WebSite` instead of `(none)`.
+- **Per-Page Detail "Schema Types: (none)" bug.** When a page used the WordPress / Yoast JSON-LD pattern (schemas nested in `@graph` arrays), citable was only reading top-level `@type` and missed everything. Now walks `@graph` recursively. Test-set WordPress pages now correctly display `Article, BreadcrumbList, Organization, Person, WebPage, WebSite` instead of `(none)`.
 - **NA and UNVERIFIED verdicts no longer appear in Action Plan.** "No Q&A content detected" was being listed as a task to do, which made no sense. NA means "does not apply", not "todo."
 - **C-10 title length now has actionable fix text.** Was empty / vague. Now: specific rewrite guidance with an example.
 
@@ -71,13 +71,13 @@ Driven by a real "send this to the marketing agency" stress test. The technical 
 
 ## v0.2.0 (2026-05-20)
 
-Two features, driven by a real a WordPress test site audit that surfaced gaps in v0.1.3.
+Two features, driven by a real audit that surfaced gaps in v0.1.3.
 
 ### Scope expansion
 
-When you scope an audit to a path (e.g. `citable audit example.com/resources/`), citable now follows 1 hop of internal links beyond the prefix. The reason: sites often split hubs from content. a WordPress test site uses `/resources/` (plural) for the hub and `/resource/foo` (singular) for the articles. v0.1.3 audited the hub and stopped. v0.2.0 audits the hub AND the articles linked from it. The prefix becomes a starting point and a SCOPE FOR DISCOVERY, not a hard filter.
+When you scope an audit to a path (e.g. `citable audit example.com/resources/`), citable now follows 1 hop of internal links beyond the prefix. The reason: sites often split hubs from content. One WordPress site in the test set uses `/resources/` (plural) for the hub and `/resource/foo` (singular) for the articles. v0.1.3 audited the hub and stopped. v0.2.0 audits the hub AND the articles linked from it. The prefix becomes a starting point and a SCOPE FOR DISCOVERY, not a hard filter.
 
-Tested on a WordPress test site `/resources/`: v0.1.3 found 4 pages (pagination hub only). v0.2.0 finds 30 pages including the /resource/foo articles.
+Tested on that site's `/resources/`: v0.1.3 found 4 pages (pagination hub only). v0.2.0 finds 30 pages including the /resource/foo articles.
 
 ### New category: Internal Linkage
 
@@ -108,7 +108,7 @@ Category weights updated:
 
 ### Calibration
 
-a WordPress test site `/resources/` (with 1-hop expansion, 30 pages crawled): 58/C. v0.1.3 was 60/C on the 4-page hub-only crawl. The new C correctly reflects the broader picture — content-level issues (H1 missing, meta description out of range) are now visible.
+WordPress test site `/resources/` (with 1-hop expansion, 30 pages crawled): 58/C. v0.1.3 was 60/C on the 4-page hub-only crawl. The new C correctly reflects the broader picture — content-level issues (H1 missing, meta description out of range) are now visible.
 
 ### Known limitations
 
